@@ -1,6 +1,3 @@
-data "aws_caller_identity" "current" {}
-
-
 module "lambda_function" {
   source = "terraform-aws-modules/lambda/aws"
 
