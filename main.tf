@@ -59,3 +59,11 @@ resource "aws_cloudwatch_event_target" "planetwatchers_scheduler" {
   arn  = module.lambda_function.lambda_function_arn
 }
 
+resource "aws_s3_bucket" "planetwatchers_bucket" {
+  bucket = var.aws_bucket
+
+  tags = {
+    Name = var.tag_name
+
+  }
+}
